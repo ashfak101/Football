@@ -1,0 +1,249 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+/* Common style */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+  color:#fff;
+    font-size: 16px;
+}
+.container{
+    margin: 80px 165px 180px 210px;
+}
+.btn i{
+    margin-left: 8px;
+ }
+
+/*------ ---------------Banner-area Style--------------- */
+
+.banner-area{
+   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2D25A0;
+    
+}
+.banner-info{
+    margin: 150px 0;
+}
+.banner-info h1{
+    font-size: 64px;
+    font-size: 64px;
+    line-height: 80px;
+    color: #FFFFFF;
+    margin-bottom: 37px;
+}
+.link-btn{
+    background-color: #E02C6D;
+    border: none;
+    cursor: pointer;
+    padding: 10px 24px;
+    position: relative;
+    z-index: 1;
+    transition: transform 2s;
+}
+.link-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(71, 130, 238);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+}
+.link-btn:hover::before{
+    transform: scaleX(1);
+}
+.link-btn:hover{
+    transform: rotateX(360deg);
+}
+.btn i{
+   margin-left: 8px;
+}
+
+/*---------- ------------------Players section ----------------------*/
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+    background: #FFFFFF;
+    
+}
+.player{
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 15px 30px 15px 15px;
+}
+.player-title{
+    font-size: 28px;
+    font-weight: bold;
+    color: #18191F;
+    margin-bottom: 10px;
+}
+.text-style{
+    font-size: 16px;
+    color: #6C6C6C;
+}
+
+/*---------------------------------------- highlights-section ------------------------------------------------*/
+
+.highlight-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 30px;
+}
+.highlight-content .text{
+    font-weight: bold;
+    font-size: 48px;
+}
+.highlight-content .text span{
+    color: #E02C6D;
+}
+.highlight-content p{
+    font-size: 16px;
+    color: #6C6C6C;
+    margin-bottom: 10px;
+}
+.link-btn-2{
+    background-color: #E02C6D;
+    border: none;
+    cursor: pointer;
+    padding: 10px 24px;
+    position: relative;
+    z-index: 1;
+    transition: transform 2s;
+}
+.link-btn-2 .btn{
+    transition: 2s;
+}
+.link-btn-2:hover .btn{
+    color: #111;
+    letter-spacing: 2px;
+}
+
+.support-content h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #E02C6D ;
+}
+.Input-Box input,textarea{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 20px;
+    font-size: 16px;
+    outline: none;
+    color: #111;
+    font-weight: 300;
+    resize: none;
+    margin-bottom: 10px;
+}
+input[type="submit"]{
+    font-size: 16px;
+    color: #fff;
+    width: 80%;
+    padding: 10px;
+    background: #E02C6D;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    margin: 0 80px;
+}
+/*----------------------- Footer section------------------------------ */
+.foonter-content{
+    text-align: center;
+    margin-bottom: 63px ;
+}
+.footer-image img{
+    width: 483.87px;
+    height: 110px;
+}
+.social-icon{
+    margin: 20px 0;
+}
+.social-icon .fab{
+    padding: 10px;
+    border: 1px solid  #969BAB;
+    border-radius: 50pc;
+    background: #969BAB;
+    color:#fff;
+    margin-left: 14px;
+
+}
+.social-icon .fab:hover{
+    color: rgb(255, 255, 255);
+    background-color: #E02C6D;
+  
+}
+.foonter-content p{
+    font-size: 18px;
+    color: #000000;
+    ;
+}
+
+
+/*-------------------------------------- Mobile Screen---------------------------------- */
+ @media only  screen and (max-width:688px)  {
+
+
+    /* Banner area */
+    .banner-area{
+        flex-direction: column;
+        padding-bottom: 16px ;
+    
+    }
+    .banner-info h1{
+        font-size: 36px;
+    }
+    .banner-image img{
+        width: 329px;
+        height: 259.17px;
+    }
+    /* Player Section */
+    .players{
+        grid-template-columns: repeat(1,1fr) ;
+
+    }
+    .container{
+        margin: 47px  0;
+    }
+    /* highlights-section */
+    .highlight-grid {
+       
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 30px;
+    }
+    .highlight-content , .support-content{
+        padding: 10px;
+    }
+    .Input-Box input,textarea{
+        width: 80%;
+    }
+    input[type="submit"]{
+        width: 60%;
+    }
+    /* footer section */
+    .footer-image img{
+        width: 125.8px;
+        height: 29.98px;
+    }
+    
+ }
